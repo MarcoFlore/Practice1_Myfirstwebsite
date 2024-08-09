@@ -12,105 +12,7 @@
 
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos para la barra de navegación */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: rgb(124, 40, 40);
-            text-align: center;
-            position: relative;
-        }
-
-        nav ul li {
-            display: inline-block;
-            position: relative;
-        }
-
-        nav ul li a {
-            color: #ffffff; /* Color blanco para el texto del enlace */
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-        }
-
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%; /* Posiciona el submenú justo debajo del elemento padre */
-            left: 0;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: rgb(124, 40, 40);
-            z-index: 1;
-            min-width: 150px; /* Ajusta el ancho mínimo del submenú si es necesario */
-        }
-
-        nav ul li ul li {
-            display: block;
-        }
-
-        nav ul li:hover ul {
-            display: block; /* Muestra el submenú al pasar el cursor sobre el elemento padre */
-        }
-
-        /* Estilos para el slider */
-        .slider-container {
-            max-width: 100%;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .slider-content {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .slider-item {
-            min-width: 100%;
-            flex: 0 0 auto;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Estilos para el pie de página */
-        footer {
-            font-family: "Nunito Sans", sans-serif;
-            background-color: rgb(127, 0, 0);
-            color: rgb(255, 255, 255);
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    
 </head>
 <body>
     <!-- Sección de encabezado del sitio -->
@@ -147,31 +49,5 @@
     <footer>
         <p>&copy; 2024 My first website año</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let slideIndex = 0; // Inicializa el índice de las imágenes
-
-            // Obtiene todas las imágenes del slider
-            const slides = document.querySelectorAll(".slider-item");
-            const totalSlides = slides.length; // Calcula el número total de imágenes
-
-            // Función para mostrar las imágenes del slider
-            function showSlides() {
-                slides.forEach(slide => {
-                    slide.style.display = "none"; // Oculta todas las imágenes
-                });
-
-                slideIndex++; // Aumenta el índice de la imagen actual
-                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
-
-                slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
-                setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
-            }
-
-            showSlides(); // Inicia la función para mostrar las imágenes
-        });
-    </script>
-
 </body>
 </html>
