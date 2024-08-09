@@ -1,25 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-rel="stylesheet">
-    <!-- Especifica el tipo de documento y la versión de HTML -->
     <meta charset="UTF-8">
-    <!-- Configura el viewport para que el sitio sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Marco Antonio Flores López</title>
 
-    <!-- STYLESHEET -->
-<link rel="stylesheet" href="styles.css">   
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para la barra de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(124, 40, 40);
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* Color blanco para el texto del enlace */
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%; /* Posiciona el submenú justo debajo del elemento padre */
+            left: 0;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(124, 40, 40);
+            z-index: 1;
+            min-width: 150px; /* Ajusta el ancho mínimo del submenú si es necesario */
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        nav ul li:hover ul {
+            display: block; /* Muestra el submenú al pasar el cursor sobre el elemento padre */
+        }
+
+        /* Estilos para el slider */
+        .slider-container {
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            flex: 0 0 auto;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            font-family: "Nunito Sans", sans-serif;
+            background-color: rgb(127, 0, 0);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <!-- Sección de encabezado del sitio -->
     <header>
         <h1>Marco Antonio Flores López</h1>
     </header>
+
     <!-- Barra de navegación con enlaces -->
     <nav>
         <ul>
@@ -35,6 +133,7 @@ rel="stylesheet">
             </li>
         </ul>
     </nav>
+
     <!-- Contenido principal de la página -->
     <main>
         <section>
@@ -42,12 +141,11 @@ rel="stylesheet">
             <a href="https://www.instagram.com/marcuspulus/"> <img src="INSTA.png"> </a> 
             <a href="https://www.facebook.com/profile.php?id=100010865048567"> <img src="FB.png"> </a>
         </section>
-
-
     </main>
+
     <!-- Pie de página del sitio -->
     <footer>
-        <p>&copy; 2024 My first website aña</p>
+        <p>&copy; 2024 My first website año</p>
     </footer>
 
     <script>
