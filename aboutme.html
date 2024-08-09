@@ -12,6 +12,102 @@
 
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para la barra de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(124, 40, 40);
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* Color blanco para el texto del enlace */
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(124, 40, 40);
+            z-index: 1;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        /* Estilos para el slider */
+        .slider-container {
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            flex: 0 0 auto;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            font-family: "Nunito Sans", sans-serif;
+            background-color: rgb(127, 0, 0);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <!-- Sección de encabezado del sitio -->
@@ -41,8 +137,8 @@
             <h2>About me</h2>
             <p>Pagina pa saber que onda conmigo.</p>
 
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0EqczV3o6fwksegAavIHpX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0EqczV3o6fwksegAavIHpX?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
             <h2>Aqui una galeria de epicas fotografias</h2>
             <div class="slider-container">
                 <!-- Contenedor de las imágenes -->
@@ -65,6 +161,7 @@
                 <a class="next" onclick="moveSlide(1)">&#10095;</a>
             </div>
         </section>
+
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.9914624127523!2d-104.6654304239956!3d23.99607857850353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc7feb61c0001%3A0xacdeb373ebb79e0f!2sMamitas%20Depilaci%C3%B3n%20Laser%20Durango!5e0!3m2!1ses!2smx!4v1721429891739!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
 
@@ -76,8 +173,8 @@
         let slideIndex = 0;
         function showSlides(n) {
             let slides = document.querySelectorAll(".slider-item");
-            if (n >= slides.length) { slideIndex = 0 }
-            if (n < 0) { slideIndex = slides.length - 1 }
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
