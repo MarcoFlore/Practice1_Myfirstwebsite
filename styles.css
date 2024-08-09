@@ -26,14 +26,48 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0;
+    position: relative;
 }
 
+/* Estilos para los enlaces de la barra de navegación */
 nav ul li a {
     color: rgb(123, 14, 14);
     padding: 0.5rem 1rem;
     text-decoration: none;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(124, 40, 40);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* Estilos para el contenido principal */
@@ -79,7 +113,7 @@ iframe {
     object-fit: cover;
 }
 
-/* Estilos para los botones de navegación */
+/* Estilos para los botones de navegación del slider */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -102,9 +136,4 @@ iframe {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-}
-
-/* Estilos para el iframe de Spotify y Google Maps */
-iframe {
-    margin: 20px 0;
 }
