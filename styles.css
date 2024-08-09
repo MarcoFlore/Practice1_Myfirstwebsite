@@ -33,7 +33,7 @@ nav ul li {
 
 /* Estilos para los enlaces de la barra de navegación */
 nav ul li a {
-    color: rgb(123, 14, 14);
+    color: rgb(255, 255, 255); /* Color blanco para el texto del enlace */
     padding: 0.5rem 1rem;
     text-decoration: none;
 }
@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 .dropdown-menu li a {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /* Color blanco para el texto del enlace en el menú desplegable */
     padding: 0.5rem 1rem;
     text-decoration: none;
     display: block;
