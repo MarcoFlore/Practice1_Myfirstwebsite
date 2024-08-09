@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-rel="stylesheet">
-    <!-- Especifica el tipo de documento y la versión de HTML -->
     <meta charset="UTF-8">
-    <!-- Configura el viewport para que el sitio sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Marco Antonio Flores López</title>
 
-    <!-- STYLESHEET -->
-<link rel="stylesheet" href="styles.css">   
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el slider */
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- Sección de encabezado del sitio -->
     <header>
         <h1>Marco Antonio Flores López</h1>
     </header>
+
     <!-- Barra de navegación con enlaces -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html">About Me</a></li>
             <li><a href="https://www.youtube.com/watch?v=aRfz4V4_psg">Sad music 3</a></li>
-             <li>
-             <a href="contact.html">Contact</a>
+            <li>
+                <a href="contact.html">Contact</a>
                 <ul>
                     <li><a href="https://www.instagram.com/marcuspulus/">Instagram</a></li>
                     <li><a href="https://www.facebook.com/profile.php?id=100010865048567">Facebook</a></li>
-                </ul></li>
+                </ul>
+            </li>
         </ul>
     </nav>
+
     <!-- Contenido principal de la página -->
     <main>
         <section>
@@ -41,31 +67,32 @@ rel="stylesheet">
             <p>Pagina pa saber que onda conmigo.</p>
 
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0EqczV3o6fwksegAavIHpX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
-<h2>Aqui una galeria de epicas fotografias</h2>
-    <div class="slider-container">
-        <!-- Contenedor de las imágenes -->
-        <div class="slider-content">
-            <!-- Primera imagen del slider -->
-            <div class="slider-item">
-                <img src="Imagen 1.jpg" alt="Imagen 1">
+
+            <h2>Aqui una galeria de epicas fotografias</h2>
+            <div class="slider-container">
+                <div class="slider-content">
+                    <!-- Primera imagen del slider -->
+                    <div class="slider-item">
+                        <img src="Imagen 1.jpg" alt="Imagen 1">
+                    </div>
+                    <!-- Segunda imagen del slider -->
+                    <div class="slider-item">
+                        <img src="Imagen 2.jpg" alt="Imagen 2">
+                    </div>
+                    <!-- Tercera imagen del slider -->
+                    <div class="slider-item">
+                        <img src="Imagen 3.jpg" alt="Imagen 3">
+                    </div>
+                </div>
             </div>
-            <!-- Segunda imagen del slider -->
-            <div class="slider-item">
-                <img src="Imagen 2.jpg" alt="Imagen 2">
-            </div>
-            <!-- Tercera imagen del slider -->
-            <div class="slider-item">
-                <img src="Imagen 3.jpg" alt="Imagen 3">
-            </div>
-        </div>
-    </div>
-    </section>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.9914624127523!2d-104.6654304239956!3d23.99607857850353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc7feb61c0001%3A0xacdeb373ebb79e0f!2sMamitas%20Depilaci%C3%B3n%20Laser%20Durango!5e0!3m2!1ses!2smx!4v1721429891739!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.9914624127523!2d-104.6654304239956!3d23.99607857850353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc7feb61c0001%3A0xacdeb373ebb79e0f!2sMamitas%20Depilaci%C3%B3n%20Laser%20Durango!5e0!3m2!1ses!2smx!4v1721429891739!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
+
     <!-- Pie de página del sitio -->
     <footer>
-        <p>&copy; 2024 My first website aña</p>
+        <p>&copy; 2024 My first website año</p>
     </footer>
 
     <script>
@@ -83,9 +110,9 @@ rel="stylesheet">
                 });
 
                 slideIndex++; // Aumenta el índice de la imagen actual
-                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
+                if (slideIndex >= totalSlides) { slideIndex = 0; } // Reinicia el índice si es mayor o igual que el número total de imágenes
 
-                slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
+                slides[slideIndex].style.display = "block"; // Muestra la imagen actual
                 setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
             }
 
