@@ -142,3 +142,17 @@ iframe {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
