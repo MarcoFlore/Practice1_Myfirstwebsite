@@ -203,3 +203,7 @@ iframe {
         opacity: 1;
     }
 }
+
+.portfolio img {
+    margin-bottom: 20px; /* Ajusta el valor según tu necesidad */
+}
