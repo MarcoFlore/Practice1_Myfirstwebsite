@@ -171,6 +171,10 @@ iframe {
     }
 }
 
+.animated-rotate {
+    animation: rotate 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+
 .zoom-in {
     transform: scale(0);
     animation: zoomIn 1s ease-in forwards;
