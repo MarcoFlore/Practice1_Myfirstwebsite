@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sección de encabezado del sitio -->
+    <header>
+        <h1>Portafolio</h1>
+    </header>
+
+    <!-- Barra de navegación con enlaces -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="sadmusic.html">Portafolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section>
+            <h2>Galería de Trabajos</h2>
+            <div class="image-gallery">
+                <img src="triste1.jpg" alt="Imagen triste 1">
+                <img src="triste2.jpg" alt="Imagen triste 2">
+                <img src="triste3.jpg" alt="Imagen triste 3">
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página del sitio -->
+    <footer>
+        <p>&copy; 2024 My first website</p>
+    </footer>
+</body>
+</html>
+Detalles Importantes:
+Enlaces de Navegación: He incluido el enlace a la nueva página "Sad Music 3" en la barra de navegación, para que sea accesible desde cualquier otra página.
+Galería de Imágenes: Las imágenes de la galería (triste1.jpg, triste2.jpg, triste3.jpg) se muestran en la sección principal.
+Agregar Estilos en el Archivo CSS
+Para que las imágenes mantengan un diseño consistente con el resto de tu sitio, puedes agregar este CSS al archivo styles.css:
+
+css
+Copiar código
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.image-gallery img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
